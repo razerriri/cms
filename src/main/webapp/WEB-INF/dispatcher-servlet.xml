@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+   <context:component-scan base-package="competency.controllers" />
+   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <property name="prefix">
+         <value>/WEB-INF/views/</value>
+      </property>
+      <property name="suffix">
+         <value>.jsp</value>
+      </property>
+   </bean>
+   <!-- Mapping of static files -->
+   <mvc:resources mapping="/resources/**" location="/resources/" />
+   <mvc:annotation-driven />
+   <mvc:default-servlet-handler />
+   <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+      <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=competencymanagement_db;integratedSecurity=true;" />
+      
+   </bean>
+   <bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
+      <property name="dataSource" ref="ds" />
+   </bean>
+   <bean id="clusterDao" class="competency.dao.ClusterDao">
+      <property name="template" ref="jt" />
+   </bean>
+   <bean id="competencyDao" class="competency.dao.CompetencyDao">
+      <property name="template" ref="jt" />
+   </bean>
+    <bean id="employeeDao" class="competency.dao.EmployeeDao">
+      <property name="template" ref="jt" />
+   </bean>
+   <bean id="ejcDao" class="competency.dao.EJCDao">
+      <property name="template" ref="jt" />
+   </bean>
+  
+</beans>
