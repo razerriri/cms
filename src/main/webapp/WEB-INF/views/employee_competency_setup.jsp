@@ -100,17 +100,13 @@
                                             <tr role="row" class="odd">                              
                                                 <td>${c.cluster_name}</td>
                                                 <td>${c.competency_name}</td>
-                                                <td>${c.competency_type}</td>
-                                                
+                                                <td>${c.competency_type}</td>                                               
                                                 <td>${c.competency_score}</td>
                                                 <td>${c.competency_timestamp}</td>
-                                                <td align="center">
-                                               
+                                                <td align="center">                                   
                                                     <a class="btn btn-md btn-warning" competency-status-id="${c.competencystatus_id}" competency-id="${c.competency_id}" competency-score="${c.competency_score}" data-toggle="modal" data-target="#modalupdate"><span class="glyphicon glyphicon-edit"></span> Edit</a>
          
-                                            		<a class="btn btn-md btn-danger" competency-status-id="${c.competencystatus_id}" employee-id="${c.employee_id}" data-toggle="modal" data-target="#modaldelete"><span class="glyphicon glyphicon-remove"></span> Delete</a>
-                                                
-                                                	
+                                            		<a class="btn btn-md btn-danger" competency-status-id="${c.competencystatus_id}" employee-id="${c.employee_id}" data-toggle="modal" data-target="#modaldelete"><span class="glyphicon glyphicon-remove"></span> Delete</a>    	
                                                 </td>
                                             </tr>
 										</c:forEach>
@@ -250,6 +246,7 @@
                         </div>
                     </div>
                 </div>
+           
             </section>
             <!-- content -->
         </aside>

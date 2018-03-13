@@ -86,24 +86,23 @@
                                     <table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_editable_1" role="grid">
                                         <thead>
                                             <tr role="row">
-                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">ID</th>
-												<th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Job Title</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Job Title</th>
                                                 <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Department</th>
                                                 <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">No. of Competencies</th>
-                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" width="100px;">Actions</th>
-                                                
+                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" width="100px;">Actions</th>     
                                             </tr>
                                         </thead>
                                         <tbody>
+                                         <c:forEach var="c" items="${joblist}">
                                             <tr role="row" class="odd">
-                                                <td class="sorting_1">0001231</td>
-                                                <td>Research Assistant</td>
-                                                <td>Faculty</td> 
-												<td>33</td>
+                                                <td>${c.job_name}</td>
+                                                <td>${c.department_name}</td> 
+												<td>${c.total_competency}</td>
                                                 <td align="center">
-                                                    <a class="btn btn-md btn-info" href="${pageContext.request.contextPath}/resources/job_competency_setup.html"><span class="glyphicon glyphicon-search"></span> View</a>
-											   </td>
+                                                    <a class="btn btn-md btn-info" onClick="window.location = 'job/view/'+${c.job_id};"><span class="glyphicon glyphicon-search"></span> View</a>                                              
+                                          	    </td>
                                             </tr>
+                                        </c:forEach>
                                         </tbody>
                                     </table>
                                 </div>
@@ -112,102 +111,6 @@
                         </div>
                     </div>
                 </div>
-				
-				<!--- ADD MODAL -->
-            	<!--- responsive model -->
-                <div class="modal fade in" id="modaladd" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-md-12">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">Job Information</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-12">                 
-                                       <div class="form-group">
-	                                        <label class="col-md-3 control-label" for="name">Job Name</label>
-	                                        <div class="col-md-9">
-	                                            <fieldset>
-	                                            	<input id="compname" name="compname" type="text"  class="form-control">
-	                                       		</fieldset>
-	                                        </div>
-                                       </div>
-                                    </div>
-                                </div>
-								<br/>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" data-dismiss="modal" class="btn">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END modal-->
-			
-            	<!---EDIT MODAL -->
-                <div class="modal fade in" id="responsive" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-md-12">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 class="modal-title">Job Information</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col-md-12">                 
-                                       <div class="form-group">
-	                                        <label class="col-md-3 control-label" for="name">Job ID</label>
-	                                        <div class="col-md-9"> 
-	                                        	<fieldset disabled>
-	                                            	<input id="compid" name="compid" type="text" placeholder="0001231" class="form-control">
-	                                       		</fieldset>
-	                                        </div>
-                                       </div>
-                                    </div>
-                                </div>
-                                <br/>
-                                <div class="row">
-                                    <div class="col-md-12">                 
-                                       <div class="form-group">
-	                                        <label class="col-md-3 control-label" for="name">Job Name</label>
-	                                        <div class="col-md-9">
-	                                            <fieldset>
-	                                            	<input id="compname" name="compname" type="text" class="form-control">
-	                                       		</fieldset>
-	                                        </div>
-                                       </div>
-                                    </div>
-                                </div>
-							</div>
-                            <div class="modal-footer">
-                                <button type="button" data-dismiss="modal" class="btn">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END modal-->
-                <!-- Third Basic Table Ends Here-->
-
-                <!--DELETE MODAL starts here-->
-               <!-- static modal-->
-                <div class="modal fade in" id="static" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-md">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <p>Would you like to delete this competency</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" data-dismiss="modal" class="btn">Cancel</button>
-                                <button type="button" data-dismiss="modal" class="btn btn-primary">Yes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END modal-->
-
             </section>
             <!-- content -->
         </aside>

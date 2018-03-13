@@ -22,7 +22,7 @@ public class EJCqueryController {
 	
 	@Autowired
 	EJCDao ejcDao;	
-	@RequestMapping(value="employee/search", method = RequestMethod.POST)
+	@RequestMapping(value="ejc/search", method = RequestMethod.POST)
 	public ModelAndView save(@ModelAttribute("competency") Competency competency) {
 		List<Competency> employeejobcompetencylist = ejcDao.getEmployeeJobCompetency(competency);
 		List<Competency> employeelist = ejcDao.getEmployee();

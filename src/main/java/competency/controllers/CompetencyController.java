@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import competency.dao.ClusterDao;
 import competency.dao.EJCDao;
 import competency.dao.EmployeeDao;
+import competency.dao.JobDao;
 import competency.model.Competency;
 
 @Controller
@@ -22,6 +23,8 @@ public class CompetencyController {
 	EmployeeDao employeeDao;
 	@Autowired
 	EJCDao ejcDao;
+	@Autowired
+	JobDao jobDao;
 
 	@RequestMapping(value= {"/","/index"})
 	public ModelAndView index() {
@@ -54,7 +57,7 @@ public class CompetencyController {
 		return mav;
 	}
 
-	@RequestMapping(value= {"/employee","/er"})
+	@RequestMapping(value= {"/employee"})
 	public ModelAndView employee_records() {
 		List<Competency> employeelist = employeeDao.getEmployee();
 		ModelAndView mav = new ModelAndView("employee_records");
@@ -75,6 +78,26 @@ public class CompetencyController {
 		return mav;
 		
 	}
-
+	
+	@RequestMapping(value= {"/job"})
+	public ModelAndView job_records() {
+		List<Competency> joblist = jobDao.getJob();
+		ModelAndView mav = new ModelAndView("job_records");
+		mav.addObject("joblist",joblist);
+		return mav;
+	}
+	
+	@RequestMapping(value="job/view/{jobid}",method = RequestMethod.GET)
+	public ModelAndView getjobcomp(@PathVariable int jobid) {
+		List<Competency> jobcompetencylist = jobDao.getJobCompetency(jobid);
+		List<Competency> competencylist = employeeDao.getCompetency();
+		List<Competency> job_id = jobDao.getJobid(jobid);
+		ModelAndView mav = new ModelAndView("job_competency_setup");
+		mav.addObject("jobcompetencylist",jobcompetencylist);
+		mav.addObject("competencylist",competencylist);
+		mav.addObject("job_id",job_id);
+		mav.addObject("competency", new Competency());
+		return mav;
+	}
 	
 }

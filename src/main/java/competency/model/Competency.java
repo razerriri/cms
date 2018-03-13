@@ -2,7 +2,7 @@ package competency.model;
 
 public class Competency {
 	
-	private int cluster_id,employee_id,competencystatus_id,competency_id,job_id;
+	private int jobcompetency_id,total_competency,cluster_id,employee_id,competencystatus_id,competency_id,job_id;
 	private String remarks,competency_name,competency_type,cluster_name,employee_name,job_name,department_name,competency_score,competency_timestamp,required_level,attained_level;
 	
 	
@@ -10,7 +10,9 @@ public class Competency {
 
 	}
 
-	public Competency(String remarks,String attained_level, String required_level, int job_id,String competency_timestamp,int competencystatus_id,int cluster_id, String cluster_name,int competency_id,String competency_name,String competency_type,int employee_id, String employee_name,String job_name,String department_name,String competency_score) {
+	public Competency(int jobcompetency_id,int total_competency,String remarks,String attained_level, String required_level, int job_id,String competency_timestamp,int competencystatus_id,int cluster_id, String cluster_name,int competency_id,String competency_name,String competency_type,int employee_id, String employee_name,String job_name,String department_name,String competency_score) {
+		this.jobcompetency_id=jobcompetency_id;
+		this.total_competency=total_competency;
 		this.remarks=remarks;
 		this.required_level=required_level;
 		this.attained_level=attained_level;
@@ -155,6 +157,22 @@ public class Competency {
 
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
+	}
+
+	public int getTotal_competency() {
+		return total_competency;
+	}
+
+	public void setTotal_competency(int total_competency) {
+		this.total_competency = total_competency;
+	}
+
+	public int getJobcompetency_id() {
+		return jobcompetency_id;
+	}
+
+	public void setJobcompetency_id(int jobcompetency_id) {
+		this.jobcompetency_id = jobcompetency_id;
 	}
 
 	
