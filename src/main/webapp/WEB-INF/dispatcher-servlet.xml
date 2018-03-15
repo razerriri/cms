@@ -37,4 +37,7 @@
   	<bean id="jobDao" class="competency.dao.JobDao">
       <property name="template" ref="jt" />
    </bean>
+   <bean id="jcDao" class="competency.dao.JCDao">
+      <property name="template" ref="jt" />
+   </bean>
 </beans>

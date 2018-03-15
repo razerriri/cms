@@ -28,7 +28,7 @@ public class ClusterController {
 	public ModelAndView getCompetency(@PathVariable int clusterid) {
 		List<Competency> competencylist = clusterDao.getCompetency(clusterid);
 		List<Competency> cluster_id = clusterDao.getClusterid(clusterid);
-		ModelAndView mav = new ModelAndView("child_competency_setup");
+		ModelAndView mav = new ModelAndView("system-setup/child_competency_setup");
 		mav.addObject("clusterid",cluster_id);
 		mav.addObject("competencylist",competencylist);
 		mav.addObject("competency", new Competency());

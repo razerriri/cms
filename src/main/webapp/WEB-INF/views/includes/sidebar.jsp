@@ -31,61 +31,87 @@
                      </a>
                      <ul class="sub-menu">
                         <li>
-                           <a href="/erp/system-setup/compensation-type/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Compensation Type</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/deductions/">
+                           <a href="">
+                           <i class="fa fa-angle-double-right"></i>
+                           <span class="title">Competencies</span>
+                           </a>
+                           <ul class="sub-menu" >
+                     	 	   <li>
+		                           <a href="/cms/job">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title" style="font-size:90%;">Job Competency</span>
+		                           </a>
+                     	 	   </li>
+                     	 	   <li>
+		                           <a href="/cms/cluster">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title" style="font-size:90%;">Cluster Competency</span>
+		                           </a>
+                     	 	   </li>
+                     	 	   <li>
+		                           <a href="/cms/employee">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title" style="font-size:80%;">Employee Competency</span>
+		                           </a>
+                     	 	   </li>
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Deductions</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/department/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Department</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/employee/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Employee</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/job-title/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Job Title</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/pay-grade/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Pay Grade</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/salary-type/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Salary Type</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/old-employee/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Old Employee</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/other-deductions/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Other deductions</span>
                            </a>
                         </li>
                         <li>
-                           <a href="/erp/system-setup/withholding-tax/">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Withholding tax</span>
                            </a>
@@ -111,7 +137,7 @@
                </ul>
             </li>
             <li>
-               <a href="/erp/manage-users">
+               <a href="">
                <i class="livicon"  data-name="settings" data-size="18" data-c="#ffffff" data-hc="#ffffff" data-loop="true"></i>
                <span class="title">User Management</span>
                </a>
@@ -133,25 +159,25 @@
                </a>
                <ul class="sub-menu">
                   <li>
-                     <a href="ss_manage evaluators.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Core HR</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Core Human Capital Management</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Queries</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Reports</span>
                            </a>
@@ -161,49 +187,49 @@
                </ul>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_manage evaluations criteria.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Time and Attendance</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           v
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Time and Attendance</span>
                            </a>
                         </li>
                         <li >
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Leave Management</span>
                            </a>
                         </li>
                         <li >
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Shift and Scheduling</span>
                            </a>
                         </li>
                         <li >
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Claims and Reimbursements</span>
                            </a>
                         </li>
                         <li >
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Timesheet Management</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Queries</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Reports</span>
                            </a>
@@ -213,44 +239,44 @@
                </ul>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_manage evaluations criteria.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Payroll</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Payroll</span>
                            </a>
                            <ul class="sub-menu">
                               <li>
-                                 <a href="ss_manage evaluators.html">
+                                 <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Dashboard</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="ss_manage evaluators.html">
+                                 <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Transaction</span>
                                  </a>
                                  <ul class="sub-menu">
                                     <li>
-                                       <a href="/erp/hrms/payroll/generate-payroll/">
+                                       <a href="">
                                        <span class="title">Generate Payroll</span>
                                        </a>
                                     </li>
                                  </ul>
                               </li>
                               <li>
-                                 <a href="ss_manage evaluators.html">
+                                 <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Queries</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="/erp/hrms/payroll/reports/">
+                                 <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Reports</span>
                                  </a>
@@ -264,48 +290,48 @@
                            </a>
                            <ul class="sub-menu">
                               <li>
-                                 <a href="/erp/hrms/cpa/">
+                                <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Dashboard</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="ss_manage evaluators.html">
+                                 <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Transaction</span>
                                  </a>
                                  <ul class="sub-menu">
                                     <li>
-                                       <a href="/erp/hrms/cpa/tcompensation/">
+                                       <a href="">
                                        <span class="title">Compensation</span>
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="/erp/hrms/cpa/compensation-plan/">
+                                       <a href="">
                                        <span class="title">Compensation Plan</span>
                                        </a>
                                     </li>
                                     <li>
-                                       <a href="/erp/hrms/cpa/administration/">
+                                       <a href="">
                                        <span class="title">Administration</span>
                                        </a>
                                     </li>
                                  </ul>
                               </li>
                               <li>
-                                 <a href="ss_manage evaluators.html">
+                                 <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Queries</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="ss_manage evaluators.html">
+                               	 <a href="">
                                  <i class="fa fa-angle-double-right"></i>
                                  <span class="title">Reports</span>
                                  </a>
                                  <ul class="sub-menu">
                                     <li>
-                                       <a href="/erp/hrms/cpa/rcompensation/">
+                                       <a href="">
                                        <span class="title">Compensations</span>
                                        </a>
                                     </li>
@@ -318,49 +344,71 @@
                </ul>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_manage evaluations criteria.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Talent Management</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="http://localhost:8080/cms">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Competency Management</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Training Management</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Succession Planning</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Performance Management</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Social Recognition</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Queries</span>
                            </a>
+                           <ul class="sub-menu">
+		                     <li>
+		                           <a href="">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title">Competency</span>
+		                           </a>
+		                           <ul class="sub-menu" >
+		                     	 	   <li>
+				                           <a href="/cms/jc">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:90%;">Job Competency</span>
+				                           </a>
+		                     	 	   </li>
+		                     	 	   <li>
+				                           <a href="/cms/ejc">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:80%;">Employee Competency</span>
+				                           </a>
+		                     	 	   </li>
+		                           </ul>
+		                        </li>
+		                  </ul>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Reports</span>
                            </a>
@@ -370,37 +418,37 @@
                </ul>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_manage evaluations criteria.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Recruitment</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Recruitment</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Applicant Management</span>
                            </a>
                         </li>
                         <li >
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">New Hire on Board</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Queries</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Reports</span>
                            </a>
@@ -410,50 +458,50 @@
                </ul>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_manage evaluations criteria.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Planning and Analytics</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Succession Planning</span>
                            </a>
                         </li>
                         <li >
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">HR Analytics</span>
                            </a>
                            <ul class="sub-menu">
                               <li>
-                                 <a href="/erp/hrms/hranalytics/dashboard/">
+                                 <a href="">
                                  <span class="title">Dashboard</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="/erp/hrms/hranalytics/recruitment/">
+                                 <a href="">
                                  <span class="title">Recruitment</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="/erp/hrms/hranalytics/workforce/">
+                                 <a href="">
                                  <span class="title">Workforce</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="/erp/hrms/hranalytics/performance-management/">
+                                 <a href="">
                                  <span class="title">Performance Management</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="/erp/hrms/hranalytics/training/">
+                                 <a href="">
                                  <span class="title">Training</span>
                                  </a>
                               </li>
                               <li>
-                                 <a href="/erp/hrms/hranalytics/compensation/">
+                                 <a href="">
                                  <span class="title">Compensation</span>
                                  </a>
                               </li>
@@ -471,43 +519,43 @@
                </a>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_manage evaluators.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Procurement</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Purchase Request Form</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Purchase Order Form</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Approved Purchase Request</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Request Form Quotation</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Bids</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Notice of Awards</span>
                            </a>
@@ -517,19 +565,19 @@
                </ul>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_manage evaluations criteria.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Warehouse Management</span>
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Items</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Delivery</span>
                            </a>
@@ -545,31 +593,31 @@
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Acquisition</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Maintenance Work Order</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Transfer</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Disposal</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Retirement</span>
                            </a>
@@ -579,7 +627,7 @@
                </ul>
                <ul class="sub-menu">
                   <li class="">
-                     <a href="ss_users.html">
+                     <a href="">
                      <i class="fa fa-angle-double-right"></i>
                      <span class="title">Queries</span>
                      </a>
@@ -593,61 +641,61 @@
                      </a>
                      <ul class = "sub-menu">
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Purchase Request</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Purchase Order</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Fast-Moving Items</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Slowing-Moving Items</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Item History</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Acquisition Summary</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Work Order Summary</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Transfer Summary</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Disposal Summary</span>
                            </a>
                         </li>
                         <li>
-                           <a href="ss_manage evaluators.html">
+                           <a href="">
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Retirement Summary</span>
                            </a>

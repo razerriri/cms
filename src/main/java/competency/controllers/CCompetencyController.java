@@ -22,11 +22,11 @@ public class CCompetencyController {
 	@Autowired
 	CompetencyDao competencyDao;
 
-	@RequestMapping(value="competency/view/{competencyid}",method = RequestMethod.GET)
+	/*@RequestMapping(value="competency/view/{competencyid}",method = RequestMethod.GET)
 	public ModelAndView getCompetency(@PathVariable int competencyid) {
 		ModelAndView mav = new ModelAndView("child_competency_level");
 		return mav;
-	}
+	}*/
 	
 	@RequestMapping(value="competency/delete/{id}/{clusterid}",method = RequestMethod.GET)
 	public ModelAndView delete(@PathVariable int id,@PathVariable int clusterid) {

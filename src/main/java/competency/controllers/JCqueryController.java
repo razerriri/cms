@@ -13,30 +13,24 @@ import org.springframework.web.servlet.ModelAndView;
 
 import competency.dao.EJCDao;
 import competency.dao.EmployeeDao;
+import competency.dao.JCDao;
 import competency.model.Competency;
 
 
 @Controller
 
-public class EJCqueryController {
+public class JCqueryController {
 	
 	@Autowired
-	EJCDao ejcDao;	
-	@RequestMapping(value="ejc/search", method = RequestMethod.POST)
-	public ModelAndView save(@ModelAttribute("competency") Competency competency) {
-		List<Competency> employeejobcompetencylist = ejcDao.getEmployeeJobCompetency(competency);
-		List<Competency> employeelist = ejcDao.getEmployee();
-		List<Competency> joblist = ejcDao.getJob();
-		ModelAndView mav = new ModelAndView("query/employee_job_competency_query");
-		mav.addObject("employeelist",employeelist);
-		mav.addObject("joblist",joblist);
+	JCDao jcDao;	
+	@RequestMapping(value="jc/view/{jobid}/{empid}",method = RequestMethod.GET)
+	public ModelAndView getjobcomp(@PathVariable int jobid,@PathVariable int empid) {
+		List<Competency> employeejobcompetencylist = jcDao.getEmployeeJobCompetency(jobid,empid);
+		ModelAndView mav = new ModelAndView("query/job_competency_query");
 		mav.addObject("employeejobcompetencylist",employeejobcompetencylist);
 		mav.addObject("competency", new Competency());
 		return mav;
 	}
-	
-	
-	
 }
 
 	

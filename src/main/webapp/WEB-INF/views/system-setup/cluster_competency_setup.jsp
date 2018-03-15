@@ -1,6 +1,6 @@
 <html>
 <head>
-    <%@ include file="includes/head.jsp" %>
+    <%@include file="../includes/head.jsp" %>
 	<!-- end of global css -->    
     <!--page level css -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendors/datatables/css/dataTables.colReorder.min.css" />
@@ -18,10 +18,10 @@
 
 <body class="skin-josh">
 	<head>
-         <%@ include file="includes/header.jsp" %>
+         <%@include file="../includes/header.jsp" %>
       </head>
       <div class="wrapper row-offcanvas row-offcanvas-left">
-         <%@include file="includes/sidebar.jsp" %>
+         <%@include file="../includes/sidebar.jsp" %>
         <!-- Right side column. Contains the navbar and content of the page -->
         <aside class="right-side">
             <!-- Content Header (Page header) -->
@@ -51,7 +51,7 @@
                             <div class="portlet-title">
                                 <div class="caption">
                                     <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                                    Cluster Competencies Table
+                                    Cluster Competencies
                                 </div>
                             </div>
                             <div class="portlet-body">
@@ -206,7 +206,7 @@
         <!-- right-side -->
     </div>
     <!-- ./wrapper -->
-    <%@include file="includes/footer.jsp" %> 
+    <%@include file="../includes/footer.jsp" %> 
     <!-- begining of page level js --> 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendors/datatables/select2.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendors/datatables/jquery.dataTables.min.js"></script>

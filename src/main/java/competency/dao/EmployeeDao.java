@@ -46,7 +46,7 @@ public class EmployeeDao {
 	}
 	
 	public List<Competency> getEmployeeCompetency(int employeeid){
-		return template.query("SELECT tbl_employees.emp_id, tbl_competency_cluster.competency_cluster_name, tbl_competency.competency_name, tbl_competency.competency_type, tbl_competency_status.competency_status_competency_score,tbl_competency_status.competency_status_id,CONVERT(VARCHAR(15), tbl_competency_status.competency_status_time_stamp, 101) FROM tbl_employees INNER JOIN tbl_competency_status ON tbl_employees.emp_id = tbl_competency_status.competency_status_emp_id INNER JOIN tbl_competency ON tbl_competency_status.competency_status_competency_id = tbl_competency.competency_id INNER JOIN tbl_competency_cluster ON tbl_competency.competency_cluster_id = tbl_competency_cluster.competency_cluster_id WHERE tbl_employees.emp_id="+employeeid+"", new RowMapper<Competency>(){
+		return template.query("SELECT tbl_employees.emp_id, tbl_competency_cluster.competency_cluster_name, tbl_competency.competency_name, tbl_competency.competency_type, tbl_competency_status.competency_status_competency_score,tbl_competency_status.competency_status_id,CONVERT(VARCHAR(15), tbl_competency_status.competency_status_time_stamp, 101),tbl_competency.competency_id FROM tbl_employees INNER JOIN tbl_competency_status ON tbl_employees.emp_id = tbl_competency_status.competency_status_emp_id INNER JOIN tbl_competency ON tbl_competency_status.competency_status_competency_id = tbl_competency.competency_id INNER JOIN tbl_competency_cluster ON tbl_competency.competency_cluster_id = tbl_competency_cluster.competency_cluster_id WHERE tbl_employees.emp_id="+employeeid+"", new RowMapper<Competency>(){
 			public Competency mapRow(ResultSet rs, int row)  throws SQLException{
 				Competency e = new Competency();
 				e.setEmployee_id(rs.getInt(1));
@@ -56,6 +56,7 @@ public class EmployeeDao {
 				e.setCompetency_score(rs.getString(5));
 				e.setCompetencystatus_id(rs.getInt(6));
 				e.setCompetency_timestamp(rs.getString(7));
+				e.setCompetency_id(rs.getInt(8));
 				return e;
 			}
 		});

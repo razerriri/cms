@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%@ include file="includes/head.jsp" %>
+    <%@include file="../includes/head.jsp" %>
 	<!-- end of global css -->    
     <!--page level css -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendors/datatables/css/dataTables.colReorder.min.css" />
@@ -20,10 +20,10 @@
 
 <body class="skin-josh">
     <head>
-         <%@ include file="includes/header.jsp" %>
+         <%@include file="../includes/header.jsp" %>
       </head>
       <div class="wrapper row-offcanvas row-offcanvas-left">
-         <%@include file="includes/sidebar.jsp" %>
+         <%@include file="../includes/sidebar.jsp" %>
         <!-- Right side column. Contains the navbar and content of the page -->
         <aside class="right-side">
             <!-- Content Header (Page header) -->
@@ -61,7 +61,7 @@
                             </div>
 							
                             <div class="portlet-body">
-                                 <form:form class="form-horizontal" method="post" action="ejc/search" modelAttribute="competency" id="searchForm">
+                                 <form:form class="form-horizontal" method="post" action="/cms/ejc/search" modelAttribute="competency" id="searchForm">
                 
 								<div class="form-group" style="height: 100%; width:95%; overflow: auto; padding-left:65px;">
                                     <label for="single-append-text" class="control-label">
@@ -163,7 +163,7 @@
         <!-- right-side -->
     
     <!-- ./wrapper -->
-	<%@include file="includes/footer.jsp" %> 
+	<%@include file="../includes/footer.jsp" %> 
     <!-- end of global js -->
     <!-- begining of page level js --> 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendors/datatables/select2.min.js"></script>

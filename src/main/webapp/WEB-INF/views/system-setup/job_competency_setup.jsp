@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<%@ include file="includes/head.jsp" %>
-	<!-- end of global css -->    
+	<%@include file="../includes/head.jsp" %>
     <!--page level css -->
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendors/datatables/css/dataTables.colReorder.min.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/vendors/datatables/css/dataTables.scroller.min.css" />
@@ -20,10 +19,11 @@
 
 <body class="skin-josh">
     <head>
-         <%@ include file="includes/header.jsp" %>
+         <%@include file="../includes/header.jsp" %>
       </head>
       <div class="wrapper row-offcanvas row-offcanvas-left">
-         <%@include file="includes/sidebar.jsp" %>
+         <%@include file="../includes/sidebar.jsp" %>
+		 
         <!-- Right side column. Contains the navbar and content of the page -->
         <aside class="right-side">
             <!-- Content Header (Page header) -->
@@ -40,7 +40,7 @@
                     <li>
                         <a href="#">System Configuration</a>
                     </li>
-                    <li class="active">Employee Competencies</li>
+                    <li class="active">Job Competencies</li>
                 </ol>
             </section>
             <!--section ends-->
@@ -53,7 +53,7 @@
                             <div class="portlet-title">
                                 <div class="caption">
                                     <i class="livicon" data-name="edit" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                                    Employee Competencies of (DELOS SANTOS, REY M.)
+                                    Competencies of (Research Assistant)
                                 </div>
                             </div>
                             <div class="portlet-body">
@@ -86,30 +86,30 @@
                                     <table class="table table-striped table-bordered table-hover dataTable no-footer" id="sample_editable_1" role="grid">
                                         <thead>
                                             <tr role="row">
+                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Job Title</th>
+												<th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Department</th>
                                                 <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Cluster</th>
-												<th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Competency</th>
-                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Type</th>
-                                               
+                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Competency</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Type</th>             
                                                 <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Level</th>
-                                                <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1">Added on</th>
                                                 <th class="sorting_asc" tabindex="0" aria-controls="sample_editable_1" rowspan="1" colspan="1" style="width:160px;">Actions</th>             
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           <c:forEach var="c" items="${employeecompetencylist}">
+                                            <c:forEach var="c" items="${jobcompetencylist}">
                                             <tr role="row" class="odd">                              
-                                                <td>${c.cluster_name}</td>
+                                                <td>${c.job_name}</td>
+                                                <td>${c.department_name}</td>
+                                                <td>${c.cluster_name}</td>                                               
                                                 <td>${c.competency_name}</td>
-                                                <td>${c.competency_type}</td>                                               
-                                                <td>${c.competency_score}</td>
-                                                <td>${c.competency_timestamp}</td>
+                                                <td>${c.competency_type}</td>
+                                                <td>${c.required_level}</td>
                                                 <td align="center">                                   
-                                                    <a class="btn btn-md btn-warning" competency-status-id="${c.competencystatus_id}" competency-id="${c.competency_id}" competency-score="${c.competency_score}" data-toggle="modal" data-target="#modalupdate"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-         
-                                            		<a class="btn btn-md btn-danger" competency-status-id="${c.competencystatus_id}" employee-id="${c.employee_id}" data-toggle="modal" data-target="#modaldelete"><span class="glyphicon glyphicon-remove"></span> Delete</a>    	
+                                                    <a class="btn btn-md btn-warning" job-competency-id="${c.jobcompetency_id}" competency-id="${c.competency_id}" required-level="${c.required_level}" data-toggle="modal" data-target="#modalupdate"><span class="glyphicon glyphicon-edit"></span> Edit</a>       
+                                            		<a class="btn btn-md btn-danger" job-competency-id="${c.jobcompetency_id}" job-id="${c.job_id}" data-toggle="modal" data-target="#modaldelete"><span class="glyphicon glyphicon-remove"></span> Delete</a>    	
                                                 </td>
                                             </tr>
-										</c:forEach>
+											</c:forEach>
                                         </tbody>
                                     </table>
                                 </div>
@@ -120,7 +120,7 @@
                 </div>
 				
 				<!--- ADD MODAL -->
-            	<form:form class="form-horizontal" method="post" action="employee/save" modelAttribute="competency" id="saveForm">
+            	<form:form class="form-horizontal" method="post" action="competency/save" modelAttribute="competency" id="saveForm">
                 <div class="modal fade in" id="modaladd" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
                     <div class="modal-dialog modal-md-12">
                         <div class="modal-content">
@@ -128,8 +128,8 @@
                                 <h4 class="modal-title">Competency Status Information</h4>
                             </div>
                            	    <div class="row">
-                           	     <c:forEach var="c" items="${employee_id}">                                  
-                           		 <form:hidden path="employee_id" id="employeeid"  value="${c.employee_id}"></form:hidden>                  
+                           	     <c:forEach var="c" items="${job_id}">                                  
+                           		 <form:hidden path="job_id" id="jobid"  value="${c.job_id}"></form:hidden>                  
 								</c:forEach>
 								<div class="col-md-12">        
 										<div class="form-group">
@@ -150,10 +150,10 @@
 									<div class="col-md-12">        
 										<div class="form-group">
 											<label for="e1" class="col-md-3  control-label">
-												Score
+												Required level
 											</label>
 											<div class="col-md-9">
-												<form:select path="competency_score" id="competencyscore" name="competencyscore" class="form-control select2">
+												<form:select path="required_level" id="requiredlevel" name="requiredlevel" class="form-control select2">
 													<form:option value="Basic">Basic</form:option>
 													<form:option value="Intermediate">Intermediate</form:option>
 													<form:option value="Advanced">Advanced</form:option>
@@ -174,7 +174,7 @@
                 <!-- END modal-->
 			
             	<!---EDIT MODAL -->
-            	<form:form class="form-horizontal" method="post" action="employee/update" modelAttribute="competency" id="updateForm">
+            	<form:form class="form-horizontal" method="post" action="competency/update" modelAttribute="competency" id="updateForm">
                 <div class="modal fade in" id="modalupdate" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
                     <div class="modal-dialog modal-md-12">
                         <div class="modal-content">
@@ -182,11 +182,12 @@
                                 <h4 class="modal-title">Competency Status Information</h4>
                             </div>
                             <div class="modal-body">
-                             <c:forEach var="c" items="${employee_id}">                                  
-                           		 <form:hidden path="employee_id" id="employeeid"  value="${c.employee_id}"></form:hidden>                  
-							 </c:forEach>
-							 
-						 		 <form:hidden path="competencystatus_id" id="competencystatusid" name="competencystatusid" ></form:hidden>
+                            						 
+                         		<c:forEach var="c" items="${job_id}">                                  
+                           		 <form:hidden path="job_id" id="jobid"  value="${c.job_id}"></form:hidden>                  
+								</c:forEach>
+								
+						 		<form:hidden path="jobcompetency_id" id="jobcompetencyid" name="jobcompetencyid" ></form:hidden>
                                 <div class="row">
 								<div class="col-md-12">        
 										<div class="form-group">
@@ -208,10 +209,10 @@
 									<div class="col-md-12">        
 										<div class="form-group">
 											<label for="e1" class="col-md-3  control-label">
-												Score
+												Required level
 											</label>
 											<div class="col-md-9">
-												<form:select path="competency_score" id="competencyscore" name="competencyscore" class="form-control select2">
+												<form:select path="required_level" id="requiredlevel" name="requiredlevel" class="form-control select2">
 													<form:option value="Basic">Basic</form:option>
 													<form:option value="Intermediate">Intermediate</form:option>
 													<form:option value="Advanced">Advanced</form:option>
@@ -253,7 +254,7 @@
         <!-- right-side -->
     </div>
     <!-- ./wrapper -->
-    <%@include file="includes/footer.jsp" %> 
+    <%@include file="../includes/footer.jsp" %> 
     <!-- begining of page level js --> 
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendors/datatables/select2.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/resources/vendors/datatables/jquery.dataTables.min.js"></script>
@@ -268,6 +269,7 @@
 	
 	<script src="${pageContext.request.contextPath}/resources/vendors/input-mask/jquery.inputmask.js" type="text/javascript"></script>
     <!-- end of page level js -->
+    
     <script type="text/javascript">
 	   
 	    $('#modaldelete').on('show.bs.modal', function (e) {
@@ -275,11 +277,11 @@
         	  var opener=e.relatedTarget;//this holds the element who called the modal
         	   
         	  //we get details from attributes
-        	  var competencystatusid=$(opener).attr('competency-status-id');
-        	  var employeeid=$(opener).attr('employee-id');
+        	  var jobcompetencyid=$(opener).attr('job-competency-id');
+        	  var jobid=$(opener).attr('job-id');
         	  
         	  document.getElementById("deletebutton").onclick = function () {
-      	    	window.location = 'employee/delete/'+competencystatusid+'/'+employeeid;
+      	    	window.location = 'competency/delete/'+jobcompetencyid+'/'+jobid;
       	   	  };
       	    
         	});
@@ -291,14 +293,14 @@
         	  var opener=e.relatedTarget;//this holds the element who called the modal
         	   
         	  //we get details from attributes
-        	  var competencystatusid=$(opener).attr('competency-status-id');
+        	  var jobcompetencyid=$(opener).attr('job-competency-id');
         	  var competencyid=$(opener).attr('competency-id');
-        	  var competencyscore=$(opener).attr('competency-score');
+        	  var requiredlevel=$(opener).attr('required-level');
 
         	  //set what we got to our form
-       	    $('#updateForm').find('[id="competencystatusid"]').val(competencystatusid);
+       	    $('#updateForm').find('[id="jobcompetencyid"]').val(jobcompetencyid);
             $('#updateForm').find('[id="competencyid"]').val(competencyid);
-            $('#updateForm').find('[id="competencyscore"]').val(competencyscore);
+            $('#updateForm').find('[id="requiredlevel"]').val(requiredlevel);
           	
         	});
 	    
