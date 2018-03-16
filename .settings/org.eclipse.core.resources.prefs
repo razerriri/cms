@@ -1,3 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/main/webapp/reports/comp.jrxml=UTF-8
-encoding//src/main/webapp/reports/jobcomp.jrxml=UTF-8
+encoding//src/main/webapp/WEB-INF/reports/employeecompetency.jrxml=UTF-8
+encoding//src/main/webapp/reports/competencyrecord.jrxml=UTF-8
+encoding//src/main/webapp/reports/employeecompetency.jrxml=UTF-8
+encoding//src/main/webapp/reports/jobcompetency.jrxml=UTF-8

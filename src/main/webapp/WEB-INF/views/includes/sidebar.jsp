@@ -412,6 +412,34 @@
                            <i class="fa fa-angle-double-right"></i>
                            <span class="title">Reports</span>
                            </a>
+                           <ul class="sub-menu">
+		                     <li>
+		                           <a href="">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title">Competency</span>
+		                           </a>
+		                           <ul class="sub-menu" >
+		                      	      <li>
+				                           <a href="/cms/report/competency-record">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:90%;">Competency Record</span>
+				                           </a>
+		                     	 	   </li>
+		                     	 	   <li>
+				                           <a href="/cms/report/job-competency">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:90%;">Job Competency</span>
+				                           </a>
+		                     	 	   </li>
+		                     	 	   <li>
+				                           <a href="/cms/report/employee-competency">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:80%;">Employee Competency</span>
+				                           </a>
+		                     	 	   </li>
+		                           </ul>
+		                        </li>
+		                  </ul>
                         </li>
                      </ul>
                   </li>

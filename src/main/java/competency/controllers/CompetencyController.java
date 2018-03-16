@@ -34,9 +34,19 @@ public class CompetencyController {
 		ModelAndView mav = new ModelAndView("index/cms");
 		return mav;
 	}
-	@RequestMapping(value= {"/index-jasper"})
-	public ModelAndView index_jasper() {
-		ModelAndView mav = new ModelAndView("index/index-jasper");
+	@RequestMapping(value= {"/report/competency-record"})
+	public ModelAndView cr() {
+		ModelAndView mav = new ModelAndView("report/competency_record");
+		return mav;
+	}
+	@RequestMapping(value= {"/report/job-competency"})
+	public ModelAndView ec() {
+		ModelAndView mav = new ModelAndView("report/job_competency");
+		return mav;
+	}
+	@RequestMapping(value= {"/report/employee-competency"})
+	public ModelAndView jc() {
+		ModelAndView mav = new ModelAndView("report/employee_competency");
 		return mav;
 	}
 	@RequestMapping(value= {"/cluster"})
