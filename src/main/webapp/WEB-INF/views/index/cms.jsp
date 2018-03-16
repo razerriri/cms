@@ -30,7 +30,185 @@
             </section>
              <section class="content">
                 <!--main content-->
+				<div class="row">
+                    <div class="col-lg-12">
+                        <!-- Stack charts strats here-->
+                        <div class="panel panel-info" >
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+								<i class="livicon" data-name="barchart" data-size="18" data-loop="true" data-c="#fff" data-hc="#fff"></i> Competency Analytics
+                                </h3>                             
+                            </div>
+                            <div class="panel-body"  >
+							 
+							 <div id="container" style="height:100%; height:500px;" ></div>
+							<script language="javascript" type="text/javascript"  src="${pageContext.request.contextPath}/resources/js/echarts.common.min.js"> </script> 
+							<script type="text/javascript">
+								var dom = document.getElementById("container");
+								var myChart = echarts.init(dom);
+								var app = {};
+								option = null;
+								var posList = [
+									'left', 'right', 'top', 'bottom',
+									'inside',
+									'insideTop', 'insideLeft', 'insideRight', 'insideBottom',
+									'insideTopLeft', 'insideTopRight', 'insideBottomLeft', 'insideBottomRight'
+								];
 
+							app.configParameters = {
+								rotate: {
+									min: -90,
+									max: 90
+								},
+								align: {
+									options: {
+										left: 'left',
+										center: 'center',
+										right: 'right'
+									}
+								},
+								verticalAlign: {
+									options: {
+										top: 'top',
+										middle: 'middle',
+										bottom: 'bottom'
+									}
+								},
+								position: {
+									options: echarts.util.reduce(posList, function (map, pos) {
+										map[pos] = pos;
+										return map;
+									}, {})
+								},
+								distance: {
+									min: 0,
+									max: 100
+								}
+							};
+
+							app.config = {
+								rotate: 90,
+								align: 'left',
+								verticalAlign: 'middle',
+								position: 'insideBottom',
+								distance: 15,
+								onChange: function () {
+									var labelOption = {
+										normal: {
+											rotate: app.config.rotate,
+											align: app.config.align,
+											verticalAlign: app.config.verticalAlign,
+											position: app.config.position,
+											distance: app.config.distance
+										}
+									};
+									myChart.setOption({
+										series: [{
+											label: labelOption
+										}, {
+											label: labelOption
+										}, {
+											label: labelOption
+										}, {
+											label: labelOption
+										}]
+									});
+								}
+							};
+
+
+							var labelOption = {
+								normal: {
+									show: true,
+									position: app.config.position,
+									distance: app.config.distance,
+									align: app.config.align,
+									verticalAlign: app.config.verticalAlign,
+									rotate: app.config.rotate,
+									formatter: '{c}  {name|{a}}',
+									fontSize: 8,
+									rich: {
+										name: {
+											textBorderColor: '#fff'
+										}
+									}
+								}
+							};
+
+							option = {
+								color: ['#003366', '#006699', '#4cabce', '#e5323e'],
+								tooltip: {
+									trigger: 'axis',
+									axisPointer: {
+										type: 'shadow'
+									}
+								},
+								legend: {
+									
+									data: ['Core Competencies', 'Leadership Competencies', 'Functional Competencies']
+								},
+								toolbox: {
+									show: true,
+									orient: 'vertical',
+									left: 'right',
+									top: 'center',
+									feature: {
+										mark: {show: true},
+										dataView: {show: true, readOnly: false},
+										magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+										restore: {show: true},
+										saveAsImage: {show: true}
+									}
+								},
+								calculable: true,
+								xAxis: [
+									{
+										
+										type: 'category',
+										axisTick: {show: false},
+										data: ['Student Services', 'Administrative', 'Acad Program Head', 'Accounting Officer', 'Cash Disbursement Officer']
+										
+									}
+								],
+								yAxis: [
+									{
+										type: 'value'
+									}
+								],
+								series: [
+									{
+										name: 'Core Competencies',
+										type: 'bar',
+										barGap: 0,
+										label: labelOption,
+										data: [16,18, 19, 15, 13]
+									},
+									{
+										name: 'Leadership Competencies',
+										type: 'bar',
+										label: labelOption,
+										data: [18, 16, 17, 12, 11]
+									},
+									{
+										name: 'Functional Competencies',
+										type: 'bar',
+										label: labelOption,
+										data: [15, 13, 15, 9, 10]
+									},
+								   
+								]
+							};;
+							if (option && typeof option === "object") {
+								myChart.setOption(option, true);
+							}
+								   </script>
+							 
+							 
+                            </div>						
+                        </div>
+                    </div>       
+                </div>
+				
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-primary">
@@ -97,30 +275,12 @@
       <%@include file="../includes/footer.jsp" %> 
       <!-- begining of page level js -->
       <!--  todolist-->
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/js/todolist.js"></script>
-      <!-- EASY PIE CHART JS -->
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/charts/easypiechart.min.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/charts/jquery.easypiechart.min.js"></script>
-      <!--for calendar-->
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/fullcalendar/calendarcustom.min.js" type="text/javascript"></script>
-      <!--   Realtime Server Load  -->
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/charts/jquery.flot.min.js" type="text/javascript"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/charts/jquery.flot.resize.min.js" type="text/javascript"></script>
-      <!--Sparkline Chart-->
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/charts/jquery.sparkline.js"></script>
-      <!-- Back to Top-->
-      <script type="text/javascript" src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/countUp/countUp.js"></script>
-      <!--   maps -->
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/jscharts/Chart.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/js/dashboard.js" type="text/javascript"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/jscharts/Chart.js"></script>
-      <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/js/pages/chartjs.js"></script>
       <!-- end of page level js -->
-  		
-  		<script src="${pageContext.request.contextPath}/resources/js/carousel.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/vendors/sparkline/src/chart-bar.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/echarts.js"></script>
+	 
+ 
+	<script src="${pageContext.request.contextPath}/resources/js/carousel.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $('#myCarousel').carousel({
