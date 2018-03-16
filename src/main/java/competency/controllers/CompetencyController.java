@@ -34,6 +34,7 @@ public class CompetencyController {
 		ModelAndView mav = new ModelAndView("index/cms");
 		return mav;
 	}
+	
 	@RequestMapping(value= {"/report/competency-record"})
 	public ModelAndView cr() {
 		ModelAndView mav = new ModelAndView("report/competency_record");
@@ -118,6 +119,16 @@ public class CompetencyController {
 		List<Competency> jobcompetencylist = jcDao.getJobCompetency();
 		ModelAndView mav = new ModelAndView("index/job_competency_index");
 		mav.addObject("jobcompetencylist",jobcompetencylist);
+		mav.addObject("competency", new Competency());
+		return mav;
+		
+	}
+	
+	@RequestMapping(value= {"/ec-report"})
+	public ModelAndView employee_competency_report() {
+		List<Competency> employeelist = ejcDao.getEmployee();
+		ModelAndView mav = new ModelAndView("query/employee_competency_report");
+		mav.addObject("employeelist",employeelist);
 		mav.addObject("competency", new Competency());
 		return mav;
 		

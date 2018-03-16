@@ -352,7 +352,7 @@
                         <li>
                            <a href="http://localhost:8080/cms">
                            <i class="fa fa-angle-double-right"></i>
-                           <span class="title">Competency Management</span>
+                           <span class="title" style="font-size:80%;">Competency Management</span>
                            </a>
                         </li>
                         <li>
@@ -428,13 +428,19 @@
 		                     	 	   <li>
 				                           <a href="/cms/report/job-competency">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:90%;">Job Competency</span>
+				                           <span class="title" style="font-size:90%;">Job Record</span>
 				                           </a>
 		                     	 	   </li>
 		                     	 	   <li>
 				                           <a href="/cms/report/employee-competency">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:80%;">Employee Competency</span>
+				                           <span class="title" style="font-size:80%;">Employee Record</span>
+				                           </a>
+		                     	 	   </li>
+		                     	 	   <li>
+				                           <a href="/cms/ec-report">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:70%;">Search Employee Record</span>
 				                           </a>
 		                     	 	   </li>
 		                           </ul>

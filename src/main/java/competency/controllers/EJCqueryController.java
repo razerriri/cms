@@ -34,6 +34,10 @@ public class EJCqueryController {
 		mav.addObject("competency", new Competency());
 		return mav;
 	}
+	@RequestMapping(value="ec-report/search", method = RequestMethod.POST)
+	public ModelAndView report() {
+		return new ModelAndView("report/employee_competency_param");
+	}
 	
 	
 	

@@ -4,13 +4,8 @@
       <!-- Include head.jsp here -->
       <%@include file="../includes/head.jsp" %>
       <!--page level css -->
-      <link href="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet" type="text/css" />
-      <link href="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/css/pages/calendar_custom.css" rel="stylesheet" type="text/css" />
-      <link rel="stylesheet" media="all" href="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/jvectormap/jquery-jvectormap.css" />
-      <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/animate/animate.min.css">
-      <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/css/only_dashboard.css" />
-      <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/css/pages/jscharts.css" />
-      <!--end of page level css-->
+      <link href="${pageContext.request.contextPath}/resources/css/pages/carousel.css" rel="stylesheet" />
+     <!--end of page level css-->
    </head>
    <body class="skin-josh">
       <!-- Include header.jsp here -->
@@ -32,6 +27,68 @@
                      </a>
                   </li>
                </ol>
+            </section>
+             <section class="content">
+                <!--main content-->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-body">
+                                <div class="box-body">
+                                    <!--carousel starts-->
+                                    <div class="row">
+                                        <!-- The carousel -->
+                                        <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+                                            <!-- Indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#transition-timer-carousel" data-slide-to="1"></li>
+                                          	 </ol>
+
+                                            <!-- Wrapper for slides -->
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <img src="${pageContext.request.contextPath}/resources/img/1.jpg" class='img-responsive' alt="image">
+                                                    <div class="carousel-caption">
+                                                        <h1 class="carousel-caption-header">Competency Management System</h1>
+                                                        <p class="carousel-caption-text hidden-sm hidden-xs">
+                                                        An HRMS Module for Competency Management of Employees
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <img src="${pageContext.request.contextPath}/resources/img/2.jpg" class='img-responsive' alt="image">
+                                                    <div class="carousel-caption">
+                                                        <h1 class="carousel-caption-header">Competency Management System</h1>
+                                                        <p class="carousel-caption-text hidden-sm hidden-xs">
+                                                        Able to keep and secure employees' competency record
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                
+                                               
+                                            </div>
+
+                                            <!-- Controls -->
+                                            <a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </a>
+                                            <a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </a>
+
+                                            <!-- Timer "progress bar" -->
+                                            <hr class="transition-timer-carousel-progress-bar animate" />
+                                        </div>
+                                    </div>
+                                    <!--carousel ends-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>				
+				</div>
             </section>
          </aside>
          <!-- End of Rightside column -->
@@ -62,5 +119,32 @@
       <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/vendors/jscharts/Chart.js"></script>
       <script src="${pageContext.request.contextPath}/resources/${pageContext.request.contextPath}/resources/js/pages/chartjs.js"></script>
       <!-- end of page level js -->
-   </body>
+  		
+  		<script src="${pageContext.request.contextPath}/resources/js/carousel.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#myCarousel').carousel({
+            interval: 4000
+        });
+
+        var clickEvent = false;
+        $('#myCarousel').on('click', '.nav a', function() {
+            clickEvent = true;
+            $('.nav li').removeClass('active');
+            $(this).parent().addClass('active');
+        }).on('slid.bs.carousel', function(e) {
+            if (!clickEvent) {
+                var count = $('.nav').children().length - 1;
+                var current = $('.nav li.active');
+                current.removeClass('active').next().addClass('active');
+                var id = parseInt(current.data('slide-to'));
+                if (count == id) {
+                    $('.nav li').first().addClass('active');
+                }
+            }
+            clickEvent = false;
+        });
+    });
+    </script>
+	   </body>
 </html>

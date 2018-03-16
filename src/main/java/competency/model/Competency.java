@@ -175,5 +175,6 @@ public class Competency {
 		this.jobcompetency_id = jobcompetency_id;
 	}
 
+
 	
 }

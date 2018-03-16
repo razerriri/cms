@@ -70,5 +70,15 @@ public class EJCDao {
 		});
 	}
 	
+	public List<Competency> getEmployeeid(Competency c){
+		return template.query("SELECT emp_id FROM tbl_employees WHERE emp_id='"+c.getEmployee_id()+"'", new RowMapper<Competency>(){
+			public Competency mapRow(ResultSet rs, int row)  throws SQLException{
+				Competency e = new Competency();
+				e.setEmployee_id(rs.getInt(1));
+				return e;
+			}
+		});
+	}
+	
 	
 }
