@@ -122,12 +122,13 @@
 				<!--- ADD MODAL -->
             	<form:form class="form-horizontal" method="post" action="employee/save" modelAttribute="competency" id="saveForm">
                 <div class="modal fade in" id="modaladd" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-md-12">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title">Competency Status Information</h4>
                             </div>
                            	    <div class="row">
+                           	    <br/>
                            	     <c:forEach var="c" items="${employee_id}">                                  
                            		 <form:hidden path="employee_id" id="employeeid"  value="${c.employee_id}"></form:hidden>                  
 								</c:forEach>
@@ -176,7 +177,7 @@
             	<!---EDIT MODAL -->
             	<form:form class="form-horizontal" method="post" action="employee/update" modelAttribute="competency" id="updateForm">
                 <div class="modal fade in" id="modalupdate" tabindex="-1" role="dialog" aria-hidden="false" style="display:none;">
-                    <div class="modal-dialog modal-md-12">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title">Competency Status Information</h4>
@@ -188,6 +189,7 @@
 							 
 						 		 <form:hidden path="competencystatus_id" id="competencystatusid" name="competencystatusid" ></form:hidden>
                                 <div class="row">
+                                <br/>
 								<div class="col-md-12">        
 										<div class="form-group">
 											<label for="e1" class="col-md-3  control-label">

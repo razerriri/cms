@@ -72,7 +72,7 @@ public class EmployeeDao {
 	}
 	
 	public List<Competency> getCompetency(){
-		return template.query("SELECT tbl_competency.competency_id, (tbl_competency_cluster.competency_cluster_name+'-'+ tbl_competency.competency_name+'-'+tbl_competency.competency_type)FROM   tbl_competency_cluster INNER JOIN tbl_competency ON tbl_competency_cluster.competency_cluster_id = tbl_competency.competency_cluster_id", new RowMapper<Competency>(){
+		return template.query("SELECT tbl_competency.competency_id, (tbl_competency_cluster.competency_cluster_name+' - '+ tbl_competency.competency_name+' - '+tbl_competency.competency_type)FROM   tbl_competency_cluster INNER JOIN tbl_competency ON tbl_competency_cluster.competency_cluster_id = tbl_competency.competency_cluster_id", new RowMapper<Competency>(){
 			public Competency mapRow(ResultSet rs, int row)  throws SQLException{
 				Competency e = new Competency();
 				e.setCompetency_id(rs.getInt(1));

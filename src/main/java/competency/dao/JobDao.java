@@ -33,7 +33,7 @@ public class JobDao {
 	}
 	
 	public List<Competency> getJob(){
-		return template.query("SELECT tbl_job.job_id, tbl_job.job_title, tbl_departments.dept_name, COUNT(tbl_job_competency.job_competency_id) AS total_competency FROM tbl_job INNER JOIN tbl_departments ON tbl_job.job_dept_id = tbl_departments.dept_id INNER JOIN tbl_job_competency ON tbl_job.job_id = tbl_job_competency.job_competency_job_id GROUP BY tbl_job.job_id, tbl_job.job_title, tbl_departments.dept_name", new RowMapper<Competency>(){
+		return template.query("SELECT tbl_job.job_id, tbl_job.job_title, tbl_departments.dept_name,CASE WHEN COUNT(tbl_job_competency.job_competency_id) = 0 THEN 0 ELSE COUNT(tbl_job_competency.job_competency_id) END  AS total_competency FROM tbl_job INNER JOIN tbl_departments ON tbl_job.job_dept_id = tbl_departments.dept_id FULL JOIN tbl_job_competency ON tbl_job.job_id = tbl_job_competency.job_competency_job_id GROUP BY tbl_job.job_id, tbl_job.job_title, tbl_departments.dept_name", new RowMapper<Competency>(){
 			public Competency mapRow(ResultSet rs, int row)  throws SQLException{
 				Competency c = new Competency();
 				c.setJob_id(rs.getInt(1));
