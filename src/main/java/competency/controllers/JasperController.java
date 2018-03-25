@@ -37,6 +37,8 @@ public class JasperController extends HttpServlet {
 		// TODO Auto-generated method stub
 		int empid=Integer.parseInt(request.getParameter("employee_id"));
 		int employeeid=Integer.parseInt(request.getParameter("employee_id"));
+		int jobid=Integer.parseInt(request.getParameter("job_id"));
+		System.out.println(jobid);
 		System.out.println(empid);
 		System.out.println(employeeid);
 	}

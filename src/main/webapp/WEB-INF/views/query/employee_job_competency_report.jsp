@@ -38,9 +38,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Report</a>
+                        <a href="#">Queries</a>
                     </li>
-                    <li class="active">Employee Competency</li>
+                    <li class="active">Employee Job Competency</li>
                 </ol>
             </section>
             <!--section ends-->
@@ -56,19 +56,19 @@
                             <div class="portlet-title">
                                 <div class="caption">
                                     <i class="livicon" data-name="search" data-size="16" data-loop="true" data-c="#fff" data-hc="white"></i>
-                                    Search Employee
+                                    Search Employee to Job
                                 </div>
                             </div>
 							
                             <div class="portlet-body">
-                                 <form:form class="form-horizontal" method="post" action="/cms/ec-report/search" modelAttribute="competency" id="searchForm">
+                                 <form:form class="form-horizontal" method="post" action="/cms/ejc-report/search" modelAttribute="competency" id="searchForm">
                 
 								<div class="form-group" style="height: 100%; width:95%; overflow: auto; padding-left:65px;">
 								 <br/> <br/>
                                     <label for="single-append-text" class="control-label">
                                         Employee Name
                                     </label>
-                                     <p></p>
+                                    <p></p>
                                     <div class="input-group select2-bootstrap-append">
                                          <form:select path="employee_id" id="employeeid" name="employeeid" class="form-control select2 ">											
 										  <c:forEach items="${employeelist}" var="c">
@@ -81,13 +81,12 @@
                                             </button>
                                         </span>
                                     </div>
-                                    <br/> <br/> <br/> <br/> <br/> <br/>  <br/> <br/> <br/> <br/> <br/> <br/>  <br/> <br/> <br/> <br/> <br/> <br/>  <br/> <br/> <br/> <br/> <br/> <br/>
-                                      
                                 </div>
-								<%-- <div class="form-group" style="height: 100%;width:95%; overflow: auto; padding-left:65px;">
+								<div class="form-group" style="height: 100%;width:95%; overflow: auto; padding-left:65px;">
                                     <label for="single-append-text" class="control-label">
                                         Target Job
                                     </label>
+                                    <p></p>
                                     <div class="input-group select2-bootstrap-append">
                                         <form:select path="job_id" id="jobid" name="jobid" class="form-control select2" >											
 										  <c:forEach items="${joblist}" var="c">
@@ -100,10 +99,15 @@
                                             </button>
                                         </span>
                                     </div>
-                                </div> --%>
-                             	</form:form>
+                                      <br/> <br/> <br/> <br/> <br/> <br/>  <br/> <br/> <br/> <br/> <br/> <br/>  <br/> <br/> <br/> <br/> <br/> <br/>  <br/> <br/> <br/> <br/> <br/> <br/>
+                                      
+                                </div>
+                                
+                              	 </form:form>
+                              	
                             </div>
                         </div>
+                        
                     </div>
                 </div>
 
@@ -132,7 +136,7 @@
     <script src="${pageContext.request.contextPath}/resources/js/pages/formelements.js" type="text/javascript"></script>
 	
 	<script src="${pageContext.request.contextPath}/resources/vendors/input-mask/jquery.inputmask.js" type="text/javascript"></script>
-   
+
     <!-- end of page level js -->
 </body>
 </html>

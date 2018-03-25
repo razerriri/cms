@@ -67,6 +67,7 @@
                                     <label for="single-append-text" class="control-label">
                                         Employee Name
                                     </label>
+                                     <p></p>
                                     <div class="input-group select2-bootstrap-append">
                                          <form:select path="employee_id" id="employeeid" name="employeeid" class="form-control select2 ">											
 										  <c:forEach items="${employeelist}" var="c">
@@ -84,6 +85,7 @@
                                     <label for="single-append-text" class="control-label">
                                         Target Job
                                     </label>
+                                     <p></p>
                                     <div class="input-group select2-bootstrap-append">
                                         <form:select path="job_id" id="jobid" name="jobid" class="form-control select2" >											
 										  <c:forEach items="${joblist}" var="c">
@@ -139,7 +141,7 @@
                                                 <td>
 													${c.attained_level}
 													</td>
-                                                <td>
+                                                <td class="y_n">
                                              		${c.remarks}
                                                 </td>
                                             </tr>
@@ -178,7 +180,22 @@
     <script src="${pageContext.request.contextPath}/resources/js/pages/formelements.js" type="text/javascript"></script>
 	
 	<script src="${pageContext.request.contextPath}/resources/vendors/input-mask/jquery.inputmask.js" type="text/javascript"></script>
-   
+   	
+   	<script type="text/javascript" >
+
+	$(document).ready(function(){
+	    $('#sample_editable_1 td.y_n').each(function(){
+	        if ($(this).text() == 'No Competency') {
+	            $(this).css('background-color','#f00');
+	        }
+	    });
+	});
+	
+	$(document).ready(function(){
+	    $("#sample_editable_1 td.y_n:contains('No Competency')").css('background-color','#fcc');
+	});
+	
+	</script>
     <!-- end of page level js -->
 </body>
 </html>

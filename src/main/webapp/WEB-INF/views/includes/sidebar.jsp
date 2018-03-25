@@ -45,13 +45,13 @@
                      	 	   <li>
 		                           <a href="/cms/job">
 		                           <i class="fa fa-angle-double-right"></i>
-		                           <span class="title" style="font-size:90%;">Job Competency</span>
+		                           <span class="title" style="font-size:80%;">Job Competency</span>
 		                           </a>
                      	 	   </li>
                      	 	   <li>
 		                           <a href="/cms/cluster">
 		                           <i class="fa fa-angle-double-right"></i>
-		                           <span class="title" style="font-size:90%;">Cluster Competency</span>
+		                           <span class="title" style="font-size:80%;">Cluster Competency</span>
 		                           </a>
                      	 	   </li>
                      	 	   <li>
@@ -394,13 +394,13 @@
 		                     	 	   <li>
 				                           <a href="/cms/jc">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:90%;">Job Competency</span>
+				                           <span class="title" style="font-size:80%;">Job Required Competency</span>
 				                           </a>
 		                     	 	   </li>
 		                     	 	   <li>
 				                           <a href="/cms/ejc">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:80%;">Employee Competency</span>
+				                           <span class="title" style="font-size:80%;">Match Employee Job Competency</span>
 				                           </a>
 		                     	 	   </li>
 		                           </ul>
@@ -422,25 +422,31 @@
 		                      	      <li>
 				                           <a href="/cms/report/competency-record">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:90%;">Competency Record</span>
+				                           <span class="title" style="font-size:80%;">Print Competency</span>
 				                           </a>
 		                     	 	   </li>
 		                     	 	   <li>
 				                           <a href="/cms/report/job-competency">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:90%;">Job Record</span>
+				                           <span class="title" style="font-size:80%;">Print Job Competency Requirements</span>
 				                           </a>
 		                     	 	   </li>
 		                     	 	   <li>
 				                           <a href="/cms/report/employee-competency">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:80%;">Employee Record</span>
+				                           <span class="title" style="font-size:80%;">Print Employee Competency</span>
 				                           </a>
 		                     	 	   </li>
 		                     	 	   <li>
 				                           <a href="/cms/ec-report">
 				                           <i class="fa fa-angle-double-right"></i>
-				                           <span class="title" style="font-size:70%;">Search Employee Record</span>
+				                           <span class="title" style="font-size:80%;">Match Employee Competency Status to Present Job</span>
+				                           </a>
+		                     	 	   </li>
+		                     	 	   <li>
+				                           <a href="/cms/ejc-report">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:80%;">Match Employee Competency Status to Target Job</span>
 				                           </a>
 		                     	 	   </li>
 		                           </ul>

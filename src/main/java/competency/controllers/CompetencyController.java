@@ -133,5 +133,17 @@ public class CompetencyController {
 		return mav;
 		
 	}
+
+	@RequestMapping(value= {"/ejc-report"})
+	public ModelAndView employee_job_competency_report() {
+		List<Competency> employeelist = ejcDao.getEmployee();
+		List<Competency> joblist = ejcDao.getJob();
+		ModelAndView mav = new ModelAndView("query/employee_job_competency_report");
+		mav.addObject("employeelist",employeelist);
+		mav.addObject("joblist",joblist);
+		mav.addObject("competency", new Competency());
+		return mav;
+		
+	}
 	
 }

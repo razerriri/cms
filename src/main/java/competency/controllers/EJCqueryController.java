@@ -38,6 +38,10 @@ public class EJCqueryController {
 	public ModelAndView report() {
 		return new ModelAndView("report/employee_competency_param");
 	}
+	@RequestMapping(value="ejc-report/search", method = RequestMethod.POST)
+	public ModelAndView ejcreport() {
+		return new ModelAndView("report/employee_job_competency_param");
+	}
 	
 	
 	
