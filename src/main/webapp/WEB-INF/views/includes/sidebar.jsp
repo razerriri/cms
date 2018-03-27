@@ -65,6 +65,27 @@
                         <li>
                            <a href="">
                            <i class="fa fa-angle-double-right"></i>
+                           <span class="title">Leaning</span>
+                           </a>
+                           <ul class="sub-menu" >
+                     	 	   <li>
+		                           <a href="http://localhost:8080/learning/courses">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title">Course</span>
+		                           </a>
+		                        </li>
+		                        <li>
+		                           <a href="http://localhost:8080/learning/courses category">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title">Course Category</span>
+		                           </a>
+		                        </li>
+		                        
+                           </ul>
+                        </li>
+                        <li>
+                           <a href="">
+                           <i class="fa fa-angle-double-right"></i>
                            <span class="title">Deductions</span>
                            </a>
                         </li>
@@ -352,7 +373,13 @@
                         <li>
                            <a href="http://localhost:8080/cms">
                            <i class="fa fa-angle-double-right"></i>
-                           <span class="title" style="font-size:80%;">Competency Management</span>
+                           <span class="title" style="font-size:90%;">Competency Management</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="http://localhost:8080/learning/index">
+                           <i class="fa fa-angle-double-right"></i>
+                           <span class="title">Learning Management</span>
                            </a>
                         </li>
                         <li>
@@ -405,6 +432,26 @@
 		                     	 	   </li>
 		                           </ul>
 		                        </li>
+		                         <li>
+		                           <a href="">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title">Learning</span>
+		                           </a>
+		                           <ul class="sub-menu" >
+		                     	 	    <li>
+				                           <a href="http://localhost:8080/learning/list course">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title">List of Course</span>
+				                           </a>
+				                        </li>
+				                        <li>
+				                           <a href="http://localhost:8080/learning/list courses category">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title">List of Course Category</span>
+				                           </a>
+				                        </li>
+		                           </ul>
+		                        </li>
 		                  </ul>
                         </li>
                         <li>
@@ -449,6 +496,20 @@
 				                           <span class="title" style="font-size:80%;">Match Employee Competency Status to Target Job</span>
 				                           </a>
 		                     	 	   </li>
+		                           </ul>
+		                        </li>
+		                        <li>
+		                           <a href="">
+		                           <i class="fa fa-angle-double-right"></i>
+		                           <span class="title">Learning</span>
+		                           </a>
+		                           <ul class="sub-menu" >
+		                      	      <li>
+				                           <a href="http://localhost:8080/learning/enrollment">
+				                           <i class="fa fa-angle-double-right"></i>
+				                           <span class="title" style="font-size:80%;">Enrollment</span>
+				                           </a>
+		                     	 	   </li>		                     	 	   
 		                           </ul>
 		                        </li>
 		                  </ul>
