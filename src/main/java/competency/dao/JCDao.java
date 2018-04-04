@@ -18,7 +18,16 @@ public class JCDao {
 	}
 	
 	public List<Competency> getJobCompetency(){
-		return template.query("SELECT distinct tbl_job.job_id, tbl_employees.emp_id, tbl_job.job_title, (tbl_employees.emp_last_name+', '+tbl_employees.emp_first_name), COUNT(DISTINCT tbl_competency.competency_name) FROM   tbl_job_competency INNER JOIN tbl_job ON tbl_job_competency.job_competency_job_id = tbl_job.job_id INNER JOIN tbl_employees ON tbl_job.job_id = tbl_employees.emp_job_id INNER JOIN tbl_competency ON tbl_job_competency.job_competency_competency_id = tbl_competency.competency_id full JOIN tbl_competency_status ON tbl_employees.emp_id = tbl_competency_status.competency_status_emp_id AND tbl_competency.competency_id = tbl_competency_status.competency_status_competency_id AND tbl_job_competency.job_competency_competency_id=tbl_competency_status.competency_status_competency_id where tbl_employees.emp_last_name IS NOT NULL GROUP BY tbl_job.job_id, tbl_employees.emp_id,tbl_job.job_title, tbl_employees.emp_last_name, tbl_employees.emp_first_name ", new RowMapper<Competency>(){
+		return template.query("SELECT distinct tbl_job.job_id, tbl_employees.emp_id,"
+				+ " tbl_job.job_title, (tbl_employees.emp_last_name+', '+tbl_employees.emp_first_name), "
+				+ "COUNT(DISTINCT tbl_competency.competency_name) FROM   tbl_job_competency INNER JOIN tbl_job"
+				+ " ON tbl_job_competency.job_competency_job_id = tbl_job.job_id INNER JOIN tbl_employees ON"
+				+ " tbl_job.job_id = tbl_employees.emp_job_id INNER JOIN tbl_competency ON tbl_job_competency.job_competency_competency_id"
+				+ " = tbl_competency.competency_id full JOIN tbl_competency_status ON tbl_employees.emp_id = "
+				+ "tbl_competency_status.competency_status_emp_id AND tbl_competency.competency_id = "
+				+ "tbl_competency_status.competency_status_competency_id AND tbl_job_competency.job_competency_competency_id="
+				+ "tbl_competency_status.competency_status_competency_id where tbl_employees.emp_last_name IS NOT NULL "
+				+ "GROUP BY tbl_job.job_id, tbl_employees.emp_id,tbl_job.job_title, tbl_employees.emp_last_name, tbl_employees.emp_first_name ", new RowMapper<Competency>(){
 			public Competency mapRow(ResultSet rs, int row)  throws SQLException{
 				Competency e = new Competency();
 				e.setJob_id(rs.getInt(1));
